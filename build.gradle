@@ -29,8 +29,12 @@ repositories {
 dependencies { /*프로젝트 개발에 필요한 의존성 설정*/
     compile('org.springframework.boot:spring-boot-starter-web')
     compile('org.projectlombok:lombok')
+    compile('org.springframework.boot:spring-boot-starter-data-jpa')/*JPA*/
+    compile('com.h2database:h2')/*H2 데이터베이스*/
     testCompile('org.springframework.boot:spring-boot-starter-test')
+
 /*
+    그래들 버전 다름
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
 */

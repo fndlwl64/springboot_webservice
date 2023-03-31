@@ -1,6 +1,7 @@
 spring:
   jpa:
     show_sql: true
+    open-in-view: false /** OSIV false -> persistence context alive during transaction **/
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect

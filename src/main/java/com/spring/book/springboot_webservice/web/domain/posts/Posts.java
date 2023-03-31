@@ -1,5 +1,6 @@
 package com.spring.book.springboot_webservice.web.domain.posts;
 
+import com.spring.book.springboot_webservice.web.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,7 +10,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity/*테이블에 매핑할 객체*/
 @Getter
-public class Posts {
+public class Posts extends BaseTimeEntity {
     @Id/*PK 지정*/
     @GeneratedValue(strategy = GenerationType.IDENTITY)/*기본키 생성 전략 : table,sequence,identity */
     private Long id;

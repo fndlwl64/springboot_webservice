@@ -35,5 +35,6 @@ dependencies { /*프로젝트 개발에 필요한 의존성 설정*/
     compile('org.springframework.boot:spring-boot-starter-oauth2-client')/*OAuth2*/
 
     testCompile('org.springframework.boot:spring-boot-starter-test')
+    testCompile('org.springframework.security:spring-security-test')
 
 }

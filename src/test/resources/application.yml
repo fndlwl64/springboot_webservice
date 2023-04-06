@@ -12,6 +12,14 @@ spring:
     include: oauth
   session:
     store-type: jdbc
+  security: # Test OAuth
+    oauth2:
+      client:
+        registration:
+          google:
+            client_id: test
+            client_secret: test
+            score: profile, email
 
 server:
   port: 8081

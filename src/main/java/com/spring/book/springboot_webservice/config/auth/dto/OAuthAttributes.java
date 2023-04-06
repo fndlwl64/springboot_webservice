@@ -25,6 +25,9 @@ public class OAuthAttributes {
     }
 
     public static OAuthAttributes of(String registrationId, String userNameAttributeName, Map<String, Object> attributes) {
+        if("naver".equals(registrationId)){
+            return ofNaver("id",attributes);
+        }
         return ofGoogle(userNameAttributeName, attributes);/*registrationId의 사용처는 ?*/
     }
 
@@ -34,6 +37,18 @@ public class OAuthAttributes {
                 .email((String) attributes.get("email"))
                 .picture((String) attributes.get("picture"))
                 .attributes(attributes)
+                .nameAttributekey(userNameAttributeName)
+                .build();
+    }
+
+    private static OAuthAttributes ofNaver(String userNameAttributeName/*항상 "id" 값을 받는다는 경고 뜸*/, Map<String, Object> attributes) {
+        Map<String, Object> response = (Map<String, Object>) attributes.get("response");/*Unchecked cast 경고*/
+
+        return OAuthAttributes.builder()
+                .name((String) response.get("name"))
+                .email((String) response.get("email"))
+                .picture((String) response.get("profile_image"))
+                .attributes(response)
                 .nameAttributekey(userNameAttributeName)
                 .build();
     }

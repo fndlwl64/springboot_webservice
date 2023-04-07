@@ -1,6 +1,6 @@
 buildscript{ /*별도의 외부 라이브러리를 가져오기 위한 설정*/
     ext{ /*build.gradle 에서 사용할 전역변수 설정*/
-        springBootVersion = '2.1.7.RELEASE'
+        springBootVersion = '2.7.1'
     }
     repositories{
         mavenCentral()
@@ -19,6 +19,7 @@ apply plugin: 'io.spring.dependency-management' /*스프링 부트의 의존성�
 
 group 'com.spring.book'
 version '1.0-SNAPSHOT'
+sourceCompatibility=11
 
 repositories {
     mavenCentral()
@@ -26,15 +27,19 @@ repositories {
 }
 
 dependencies { /*프로젝트 개발에 필요한 의존성 설정*/
-    compile('org.springframework.boot:spring-boot-starter-web')
-    compile('org.projectlombok:lombok')
-    compile('org.springframework.boot:spring-boot-starter-data-jpa')/*JPA*/
-    compile('com.h2database:h2')/*H2 데이터베이스*/
-    compile('org.springframework.session:spring-session-jdbc')/*데이터베이스 세션 저장소*/
-    compile('org.springframework.boot:spring-boot-starter-mustache')
-    compile('org.springframework.boot:spring-boot-starter-oauth2-client')/*OAuth2*/
+    implementation('org.springframework.boot:spring-boot-starter-web')
+    implementation('org.projectlombok:lombok')
+    implementation('org.springframework.boot:spring-boot-starter-data-jpa')/*JPA*/
+    implementation('com.h2database:h2')/*H2 데이터베이스*/
+    implementation('org.springframework.session:spring-session-jdbc')/*데이터베이스 세션 저장소*/
+    implementation('org.springframework.boot:spring-boot-starter-mustache')
+    implementation('org.springframework.boot:spring-boot-starter-oauth2-client')/*OAuth2*/
 
-    testCompile('org.springframework.boot:spring-boot-starter-test')
-    testCompile('org.springframework.security:spring-security-test')
+    testImplementation('org.springframework.boot:spring-boot-starter-test')
+    testImplementation('org.springframework.security:spring-security-test')
 
+}
+
+test{
+    useJUnitPlatform()
 }

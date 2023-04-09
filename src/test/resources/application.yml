@@ -1,13 +1,13 @@
 spring:
-  jpa:
-    show_sql: true
-    open-in-view: false # OSIV false -> persistence context alive during transaction
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-  h2:
-    console:
-      enabled: true
+#  jpa:
+#    show_sql: true
+#    open-in-view: false # OSIV false -> persistence context alive during transaction
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+#  h2:
+#    console:
+#      enabled: true
   profiles:
     include: oauth
   session:
@@ -20,6 +20,9 @@ spring:
             client_id: test
             client_secret: test
             score: profile, email
-
 server:
   port: 8081
+  servlet:
+    encoding:
+      force: true
+      charset: UTF-8

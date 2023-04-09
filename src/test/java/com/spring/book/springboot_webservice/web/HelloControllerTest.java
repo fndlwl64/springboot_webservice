@@ -1,21 +1,23 @@
 package com.spring.book.springboot_webservice.web;
 
 import com.spring.book.springboot_webservice.config.auth.SecurityConfig;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+//import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+//import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.FilterType;
 import org.springframework.security.test.context.support.WithMockUser;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
+//import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
-
-@RunWith(SpringRunner.class)/*Junit 에 내장된 실행자 외에 다른 실행자 실행*/
+@ExtendWith(SpringExtension.class)/*Junit 에 내장된 실행자 외에 다른 실행자 실행*/
 @WebMvcTest(controllers = HelloController.class,
 excludeFilters = {
         @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = SecurityConfig.class)

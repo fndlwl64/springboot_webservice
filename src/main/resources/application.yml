@@ -1,7 +1,7 @@
 spring:
-#  jpa:
+  jpa:
+    open-in-view: false # OSIV false -> persistence context alive during transaction
 #    show_sql: true
-#    open-in-view: false # OSIV false -> persistence context alive during transaction
 #    properties:
 #      hibernate:
 #        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
@@ -12,6 +12,9 @@ spring:
     include: oauth
   session:
     store-type: jdbc
-
 server:
   port: 8081
+  servlet:
+    encoding:
+      force: true
+      charset: UTF-8

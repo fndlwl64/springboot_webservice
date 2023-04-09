@@ -1,6 +1,8 @@
 package com.spring.book.springboot_webservice.web.dto;
 
-import org.junit.Test;
+//import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

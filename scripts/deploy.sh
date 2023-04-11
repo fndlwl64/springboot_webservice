@@ -23,7 +23,7 @@ fi
 
 echo "> 새 애플리케이션 배포"
 
-JAR_NAME=$(ls -tr ${REPOSITORY}/*.jar | grep -v "plain"| tail -n 1)
+JAR_NAME=$(ls -tr ${REPOSITORY}/zip/*.jar | grep -v "plain"| tail -n 1)
 
 echo "> JAR Name: ${JAR_NAME}"
 

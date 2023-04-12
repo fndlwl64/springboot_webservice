@@ -6,3 +6,5 @@ spring:
       hibernate: org.hibernate.dialect.MariaDBDialect
   session:
     store-type: jdbc
+server:
+  port: 8081

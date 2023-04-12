@@ -1,8 +1,12 @@
 spring:
   jpa:
     open-in-view: false # OSIV false -> persistence context alive during transaction
+    show_sql: true
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.H2Dialect
   profiles:
-    include: oauth,real-db
+    include: oauth
   session:
     store-type: jdbc
 server:

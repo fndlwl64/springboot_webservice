@@ -2,7 +2,6 @@ package com.spring.web_community.config.auth.dto;
 
 import com.spring.web_community.web.domain.user.Role;
 import com.spring.web_community.web.domain.user.User;
-import com.spring.web_community.web.dto.MapResponse;
 import lombok.Builder;
 import lombok.Getter;
 
@@ -43,11 +42,7 @@ public class OAuthAttributes {
     }
 
     private static OAuthAttributes ofNaver(String userNameAttributeName, Map<String, Object> attributes){
-        Map<String, Object> response = null;
-        Object responseObj = attributes.get("response");
-        if (responseObj instanceof Map) {
-            response = (MapResponse) responseObj;
-        }
+        Map<String, Object> response = (Map<String, Object>) attributes.get("response");
 
         return OAuthAttributes.builder()
                 .name((String) response.get("name"))

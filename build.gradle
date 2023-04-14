@@ -26,7 +26,7 @@ java {
     sourceCompatibility = JavaVersion.VERSION_11
     targetCompatibility = JavaVersion.VERSION_11
 }
-group 'com.spring.book'
+group 'com.spring'
 version '1.0.1-SNAPSHOT-'+new Date().format("yyyyMMddHHmmss")
 
 repositories {

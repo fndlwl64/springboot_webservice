@@ -10,7 +10,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity/*테이블에 매핑할 객체*/
 @Getter
-@Table(name = "book_posts")
+@Table(name = "posts")
 public class Posts extends BaseTimeEntity {
     @Id/*PK 지정*/
     @GeneratedValue(strategy = GenerationType.IDENTITY)/*기본키 생성 전략 : table,sequence,identity */

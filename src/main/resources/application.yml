@@ -1,6 +1,6 @@
 spring:
   profiles:
-    include: oauth , h2
+    include: oauth
   jpa:
     open-in-view: false # OSIV false -> persistence context alive during transaction
     show_sql: true

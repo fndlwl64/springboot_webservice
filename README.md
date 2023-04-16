@@ -50,9 +50,10 @@
   - Layered Architecture로 계층을 나누어 구분
   - DTO : 클라이언트로 부터 받는 데이터를 받아 계층 간 데이터 교환을 위해 사용
   - Entity : 데이터베이스의 테이블과 ORM을 구현하는 객체
-- Oauth2
+- SpringSecurity
   - 회원 정보 보안을 위해 사용
-  - 
-  
+  - SecurityFilterChain을 통해 인증 및 인가 절차 시작
+  - 네이버나 구글에게 OAuth2 인증 절차를 수행하게 하고 액세스 토큰 발급 
+  - 발급 받은 토큰을 OAuth2AuthenticationProcessingFilter에서 유효성 검사 실시
 
 

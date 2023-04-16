@@ -52,8 +52,8 @@
   - Entity : 데이터베이스의 테이블과 자바 객체 사이의 ORM을 구현하는 객체
 - SpringSecurity
   - 회원 정보 보안을 위해 사용
-  - SecurityFilterChain을 통해 인증 및 인가 절차 시작
+  - SecurityFilterChain에서 클라이언트에서 요청을 받고 인증 및 인가 절차를 하는 객체에 넘김
   - 네이버나 구글에게 OAuth2 인증 절차를 수행하게 하고 액세스 토큰 발급 
-  - 발급 받은 토큰을 SecurityFilterChain에서 유효성 검사를 해주는 객체에 넘김 
+  - 발급 받은 토큰을 SecurityFilterChain에서 유효성 검사를 해주는 객체에 넘김
 
 

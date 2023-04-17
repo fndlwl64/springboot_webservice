@@ -63,5 +63,5 @@
   - MariaDB 데이터베이스 설정
   - 배포하기 전에 테스트할 용도로 h2 데이터베이스를 따로 사용 (application-h2.yml에 설정)
 - 깃허브 Master에 올릴 시 ec2에 배포되도록 Travis CI 사용
-  - 보안을 위해 
+  - 보안을 위해 깃허브에 DB와 OAuth2에 접속하기 위한 계정 정보를 담는 application 파일을 올리지 
 

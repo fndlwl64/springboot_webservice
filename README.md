@@ -56,4 +56,12 @@
   - 네이버나 구글에게 OAuth2 인증 절차를 수행하게 하고 액세스 토큰 발급 
   - 발급 받은 토큰을 SecurityFilterChain에서 유효성 검사를 해주는 객체에 넘김
 
+# Deploy
+- 배포를 위해 AWS ec2 서버 사용
+  - t2.micro 사용 -> 메모리 양이 적은 문제 발생(1GB) -> 해결책으로 swap 파일이라는 가상 메모리(4GB) 설정
+- AWS RDS 사용 
+  - MariaDB 데이터베이스 설정
+  - 배포하기 전에 테스트할 용도로 h2 데이터베이스를 따로 사용 (application-h2.yml에 설정)
+- 깃허브 Master에 올릴 시 ec2에 배포되도록 Travis CI 사용
+  - 보안을 위해 
 

@@ -66,7 +66,7 @@
   - 보안을 위해 깃허브에 DB와 OAuth2에 접속하기 위한 계정 정보를 담는 application 파일을 올리지 않도록 .gitignore 설정
 - 무중단 배포를 위해 Nginx 사용
   - ec2 내부에 8081, 8082 포트 사용해서 배포
-`Link` : http://ec2-3-37-111-187.ap-northeast-2.compute.amazonaws.com/
+- `Link` : http://ec2-3-37-111-187.ap-northeast-2.compute.amazonaws.com/
 
 # Execution
 

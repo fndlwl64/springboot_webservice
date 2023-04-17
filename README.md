@@ -66,4 +66,19 @@
   - 보안을 위해 깃허브에 DB와 OAuth2에 접속하기 위한 계정 정보를 담는 application 파일을 올리지 않도록 .gitignore 설정
 - 무중단 배포를 위해 Nginx 사용
   - ec2 내부에 8081, 8082 포트 사용해서 배포
+`Link` : http://ec2-3-37-111-187.ap-northeast-2.compute.amazonaws.com/
+
+# Execution
+
+ 자바 11 버전으로 실행이 가능하고 gradle로 개발했음으로 gradle.bat를 build 하면 됩니다.
+ 
+ - gradle.bat을 빌드
+ - 생성된 디렉토리 내부로 이동
+ - jar 파일 실행
+ ```bash
+ $ gradle.bat build
+ $ cd build/libs
+ $ java -jar [jar 파일 이름].jar
+```
+
 

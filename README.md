@@ -61,7 +61,9 @@
   - t2.micro 사용 -> 메모리 양이 적은 문제 발생(1GB) -> 해결책으로 swap 파일이라는 가상 메모리(4GB) 설정
 - AWS RDS 사용 
   - MariaDB 데이터베이스 설정
-  - 배포하기 전에 테스트할 용도로 h2 데이터베이스를 따로 사용 (application-h2.yml에 설정)
+  - 배포하기 전에 테스트할 용도로 h2 데이터베이스를 따로 사용 (application-h2.yml에 설정) -> application에 profile 설정을 바꾸면서 사용
 - 깃허브 Master에 올릴 시 ec2에 배포되도록 Travis CI 사용
-  - 보안을 위해 깃허브에 DB와 OAuth2에 접속하기 위한 계정 정보를 담는 application 파일을 올리지 
+  - 보안을 위해 깃허브에 DB와 OAuth2에 접속하기 위한 계정 정보를 담는 application 파일을 올리지 않도록 .gitignore 설정
+- 무중단 배포를 위해 Nginx 사용
+  - 8081, 8082 포트 사용해서 배포
 
